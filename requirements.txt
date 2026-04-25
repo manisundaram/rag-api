@@ -1,0 +1,13 @@
+-e ../ai-service-kit
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+python-dotenv
+pytest
+httpx
+chromadb
+sentence-transformers
+openai
+anthropic
+google-generativeai

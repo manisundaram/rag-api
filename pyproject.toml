@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-api"
+version = "0.1.0"
+description = "RAG-based question answering API built on top of ai-service-kit."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Mani" }
+]
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic",
+    "pydantic-settings",
+    "python-dotenv",
+    "chromadb",
+    "sentence-transformers",
+    "openai",
+    "anthropic",
+    "google-generativeai",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "httpx",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
